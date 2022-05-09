@@ -75,6 +75,7 @@ func generateBinaryPrefix() string {
 // logs to standard output
 func runCommand(name string, args ...string) (*exec.Cmd, error) {
 	cmd := exec.Command(name, args...)
+	fmt.Println(name, args)
 	stderr, err := cmd.StderrPipe()
 	if err != nil {
 		return cmd, err
