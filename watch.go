@@ -73,6 +73,7 @@ func (w *Watcher) Watch() {
 			// discard chmod events
 			if event.Op&fsnotify.Chmod != fsnotify.Chmod {
 				// test files do not need a rebuild
+				fmt.Println(event.String())
 				if isTestFile(event.Name) {
 					continue
 				}

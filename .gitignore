@@ -1,0 +1,6 @@
+./cms
+go.sum
+/vendor
+.DS_Store
+config.local.yml
+.idea

@@ -54,7 +54,7 @@ func (p *Params) packagePath() string {
 
 // generateBinaryName generates a new binary name for each rebuild, for preventing any sorts of conflicts
 func (p *Params) generateBinaryName() string {
-	return "watcher-binary"
+	return "/.binary"
 	rand.Seed(time.Now().UnixNano())
 	randName := rand.Int31n(999999)
 	packageName := strings.Replace(p.packagePath(), "/", "-", -1)

@@ -1,14 +1,15 @@
 package main
 
 import (
+	"fmt"
 	"os"
 
-	"github.com/canthefason/go-watcher"
+	"github.com/iesreza/go-watcher"
 )
 
 func main() {
 	params := watcher.ParseArgs(os.Args)
-
+	fmt.Println("Initialize Auto Build Tool ...")
 	w := watcher.MustRegisterWatcher(params)
 
 	r := watcher.NewRunner()
